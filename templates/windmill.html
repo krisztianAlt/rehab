@@ -6,27 +6,16 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Rehab Game: The Windmill</title>
         
-        <!-- <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script> -->
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script> 
+        <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
         <!-- IMPORTANT: import bootstrap.min.js for modals, and import it after jquery -->
         <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->    
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="{{url_for('static', filename='windmill_style.css')}}">
         
-        <!-- <script src="{{url_for('static', filename='???.js')}}" defer></script> -->
+        <script src="{{url_for('static', filename='responsive_images.js')}}" defer></script>
 
-        
-        <script type="text/javascript" language="JavaScript">
-        function set_body_height() { // set body height = window height
-            $('body').height($(window).height());
-        }
-        $(document).ready(function() {
-            $(window).bind('resize', set_body_height);
-            set_body_height();
-        });
-        </script>
     </head>
     <body>
         <!-- <div class="container"> -->
