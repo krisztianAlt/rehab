@@ -1,0 +1,15 @@
+Rotate DOM elements (for the practice of the thumb):
+https://github.com/godswearhats/jquery-ui-rotatable
+http://www.developphp.com/video/JavaScript/Transform-Rotate-Image-Spin-Smooth-Animation-Tutorial
+https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_translate
+
+Responsive background-image:
+https://css-tricks.com/perfect-full-page-background-image/
+https://www.kirupa.com/html5/make_body_take_up_full_browser_height.htm
+https://www.w3schools.com/bootstrap/bootstrap_images.asp
+
+How to resize an image to fit in the browser window:
+https://stackoverflow.com/questions/6169666/how-to-resize-an-image-to-fit-in-the-browser-window
+
+Overlap:
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss_zindex
