@@ -15,15 +15,21 @@
         <link rel="stylesheet" href="{{url_for('static', filename='windmill_style.css')}}">
         
         <script src="{{url_for('static', filename='responsive_images.js')}}" defer></script>
+        
+        <script src="{{url_for('static', filename='rotate.js')}}" defer></script>
 
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="static/jquery.ui.rotatable.js"></script>
+        <link rel="stylesheet" href="static/jquery.ui.rotatable.css">
     </head>
     <body>
-        <!-- <div class="container"> -->
-            <!-- <img class="img-responsive" src="static/mill2.png" alt="mill"> -->
-        <!-- </div> -->
+        <!-- <div id="target" style="width: 250px; border: 1px solid #862dde; padding: 20px; padding-right: 40px"> -->
+        <!-- <div id="target" style="padding: 20px">
+            <img class="center fit-vanes" src="static/vanes3.png">
+        </div>  -->
 
-        <img class="center fit" id="mill" src="static/mill2.png" >
-        <img class="center fit" id="vanes" src="static/vanes1.png">
-
+        <img class="center fit" id="mill" src="static/mill2.png">   
+         <img class="center fit-vanes" id="target" src="static/vanes3.png">     
     </body>
 </html>
