@@ -1,4 +1,4 @@
-$(document).on("pagecreate",  function(){
+$(document).on("pagecreate",  "#pageone", function(){
     var degree = 0.3;
     var speed = 0.3;
     $("p").on("tap",function(){
