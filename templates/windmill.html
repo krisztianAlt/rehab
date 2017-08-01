@@ -20,8 +20,8 @@
          <link rel="stylesheet" href="{{url_for('static', filename='windmill_style.css')}}">  
         <script>
             $(document).on("pagecreate", function(){
-                var degree = 0.3;
-                var speed = 0.3;
+                var degree = 1;
+                var speed = 1;
                 $("img").on("touchmove",function(){
                     // $(this).hide();
                     $(this).css("transform", "rotate("+degree+"deg)");
