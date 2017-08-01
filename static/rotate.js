@@ -1,3 +1,16 @@
+
+
+
+            $(document).on("pagecreate","#pageone",function(){
+                $("p").on("tap",function(){
+                    $(this).hide();
+                });                       
+            });
+        
+
+
+
+
 $(document).ready(function(){
     var degree = 0.1;
     var speed = 0.1;
