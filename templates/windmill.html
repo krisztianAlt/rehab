@@ -22,7 +22,7 @@
             $(document).on("pagecreate", function(){
                 var degree = 5;
                 var speed = 5;
-                $("img").on("touchmove",function(){
+                $("#vanes").on("touchmove",function(){
                     // $(this).hide();
                     $(this).css("transform", "rotate("+degree+"deg)");
                     degree = degree+speed;
