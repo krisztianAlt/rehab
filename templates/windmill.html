@@ -17,13 +17,20 @@
          <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
         <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-         <link rel="stylesheet" href="{{url_for('static', filename='windmill_style.css')}}">  
+        <link rel="stylesheet" href="{{url_for('static', filename='windmill_style.css')}}">  
         <script>
             $(document).on("pagecreate", function(){
                 var degree = 5;
                 var speed = 5;
+                
+                // mobile touch screen:
                 $("#vanes").on("touchmove",function(){
-                    // $(this).hide();
+                    $(this).css("transform", "rotate("+degree+"deg)");
+                    degree = degree+speed;
+                });
+
+                // PC mouse:
+                $("#vanes").on("mousemove",function(){
                     $(this).css("transform", "rotate("+degree+"deg)");
                     degree = degree+speed;
                 });                       
@@ -51,7 +58,7 @@
 
 
 
-        <!-- <img class="center fit" id="mill" src="static/mill2.png">    -->
-         <img class="center fit-vanes" id="vanes" src="static/vanes3.png"> 
+         <img class="center fit" id="mill" src="static/mill2.png">    
+        <img class="center fit-vanes" id="vanes" src="static/vanes3.png"> 
     </body>
 </html>
