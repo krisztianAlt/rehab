@@ -20,10 +20,14 @@
         <!-- <link rel="stylesheet" href="{{url_for('static', filename='windmill_style.css')}}">  -->
         <script>
             $(document).on("pagecreate","#pageone",function(){
+                var degree = 0.3;
+                var speed = 0.3;
                 $("p").on("tap",function(){
-                    $(this).hide();
+                    // $(this).hide();
+                    $(this).css("transform", "rotate("+degree+"deg)");
+                    degree = degree+speed;
                 });                       
-                });
+            });
         </script>
     </head>
     <body>
