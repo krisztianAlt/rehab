@@ -24,13 +24,18 @@
                 var speed = 5;
                 
                 // mobile touch screen:
-                $("#vanes").on("touchmove",function(){
+                $("#vanes").on("touchmove", function(){
                     $(this).css("transform", "rotate("+degree+"deg)");
                     degree = degree+speed;
                 });
 
                 // PC mouse:
-                $("#vanes").on("mousemove",function(){
+                $("#vanes").on("mousemove", function(event){
+                    var x = event.clientX;
+                    var y = event.clientY;
+                    var coords = "X coords: " + x + ", Y coords: " + y;
+                    document.getElementById("devdatas").innerHTML = coords;
+                    
                     $(this).css("transform", "rotate("+degree+"deg)");
                     degree = degree+speed;
                 });                       
@@ -54,7 +59,8 @@
             </div>
         </div>    -->
 
-        <p id="devdatas">DEVELOPMENT DATAS:</p>
+        <p>DEVELOPMENT DATAS:</p>
+        <p id="devdatas"></p>
         <img class="center fit" id="mill" src="static/mill2.png">    
         <img class="center fit-vanes" id="vanes" src="static/vanes3.png">
     </body>
