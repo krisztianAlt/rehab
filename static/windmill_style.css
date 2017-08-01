@@ -38,13 +38,13 @@ body {
 }
 
 .center {
-    /* display: block; */
+    display: block;
     margin: auto;
 }
 
-/* img {
+ img {
     position: absolute;
-} */
+} 
 
 
 /* #mill {
