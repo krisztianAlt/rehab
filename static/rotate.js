@@ -1,34 +1,44 @@
-
-
-
-            $(document).on("pagecreate","#pageone",function(){
-                $("p").on("tap",function(){
-                    $(this).hide();
-                });                       
-            });
+// $(document).on("pagecreate",  function(){
+//     var degree = 0.1;
+//     var speed = 0.1;
+//     $("p").on("tap",function(){
+//         // $(this).hide();
+//         $(this).css("transform", "rotate("+degree+"deg)");
+//         degree = degree+speed;
+//     });                       
+// });
         
-
-
-
-
-$(document).ready(function(){
-    var degree = 0.1;
-    var speed = 0.1;
-    
-    // use with mouse:
-    $(document).on('mousemove', '#vanes', function(){
-        console.log('Vanes clicked');
+$(document).on("pagecreate", function(){
+    var degree = 10;
+    var speed = 10;
+    $("img").on("tap",function(){
         $(this).css("transform", "rotate("+degree+"deg)");
         degree = degree+speed;
     });
-
-    // use with touchscreen:
-    $(document).on('swiperight', '#vanes', function(){
-        alert('Vanes touched!');
-        $(this).css("transform", "rotate("+degree+"deg)");
-        degree = degree+speed;
-    })
 });
+
+
+
+// $(document).ready(function(){
+//     var degree = 0.1;
+//     var speed = 0.1;
+    
+//     // use with mouse:
+//     $(document).on('mousemove', '#vanes', function(){
+//         console.log('Vanes clicked');
+//         $(this).css("transform", "rotate("+degree+"deg)");
+//         degree = degree+speed;
+//     });
+
+//     // use with touchscreen:
+//     $(document).on('swiperight', '#vanes', function(){
+//         alert('Vanes touched!');
+//         $(this).css("transform", "rotate("+degree+"deg)");
+//         degree = degree+speed;
+//     })
+// });
+
+
 // TEST IT:
 // https://www.w3schools.com/jsref/event_clientx.asp
 
