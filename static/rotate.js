@@ -1,21 +1,21 @@
-// $(document).on("pagecreate",  function(){
-//     var degree = 0.1;
-//     var speed = 0.1;
-//     $("p").on("tap",function(){
-//         // $(this).hide();
-//         $(this).css("transform", "rotate("+degree+"deg)");
-//         degree = degree+speed;
-//     });                       
-// });
-        
-$(document).on("pagecreate", function(){
-    var degree = 10;
-    var speed = 10;
-    $("img").on("tap",function(){
+$(document).on("pagecreate",  function(){
+    var degree = 0.3;
+    var speed = 0.3;
+    $("p").on("tap",function(){
+        // $(this).hide();
         $(this).css("transform", "rotate("+degree+"deg)");
         degree = degree+speed;
-    });
+    });                       
 });
+        
+// $(document).on("pagecreate", function(){
+//     var degree = 10;
+//     var speed = 10;
+//     $("img").on("tap",function(){
+//         $(this).css("transform", "rotate("+degree+"deg)");
+//         degree = degree+speed;
+//     });
+// });
 
 
 
