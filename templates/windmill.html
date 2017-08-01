@@ -22,7 +22,7 @@
             $(document).on("pagecreate", function(){
                 var degree = 0.3;
                 var speed = 0.3;
-                $("img").on("tap",function(){
+                $("img").on("mousemove",function(){
                     // $(this).hide();
                     $(this).css("transform", "rotate("+degree+"deg)");
                     degree = degree+speed;
