@@ -19,10 +19,10 @@
 
         <!-- <link rel="stylesheet" href="{{url_for('static', filename='windmill_style.css')}}">  -->
         <script>
-            $(document).on("pagecreate","#pageone",function(){
+            $(document).on("pagecreate", function(){
                 var degree = 0.3;
                 var speed = 0.3;
-                $("p").on("tap",function(){
+                $("img").on("tap",function(){
                     // $(this).hide();
                     $(this).css("transform", "rotate("+degree+"deg)");
                     degree = degree+speed;
@@ -31,7 +31,7 @@
         </script>
     </head>
     <body>
-         <div data-role="page" id="pageone">
+        <!-- <div data-role="page" id="pageone">
             <div data-role="header">
                 <h1>The tap Event</h1>
             </div>
@@ -45,13 +45,13 @@
             <div data-role="footer">
                 <h1>Footer Text</h1>
             </div>
-        </div>   
+        </div>    -->
 
 
 
 
 
         <!-- <img class="center fit" id="mill" src="static/mill2.png">    -->
-        <!-- <img class="center fit-vanes" id="vanes" src="static/vanes3.png"> -->
+         <img class="center fit-vanes" id="vanes" src="static/vanes3.png"> 
     </body>
 </html>
