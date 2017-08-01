@@ -6,30 +6,17 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Rehab Game: The Windmill</title>
         
-        <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script> 
-        <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
-        <!-- IMPORTANT: import bootstrap.min.js for modals, and import it after jquery -->
-        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->    
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+        <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+        <!-- <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
+        
         <link rel="stylesheet" href="{{url_for('static', filename='windmill_style.css')}}">
         
         <script src="{{url_for('static', filename='responsive_images.js')}}" defer></script>
-        
         <script src="{{url_for('static', filename='rotate.js')}}" defer></script>
 
-        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-        <script src="static/jquery.ui.rotatable.js"></script>
-        <link rel="stylesheet" href="static/jquery.ui.rotatable.css">
     </head>
     <body>
-        <!-- <div id="target" style="width: 250px; border: 1px solid #862dde; padding: 20px; padding-right: 40px"> -->
-        <!-- <div id="target" style="padding: 20px">
-            <img class="center fit-vanes" src="static/vanes3.png">
-        </div>  -->
-
         <img class="center fit" id="mill" src="static/mill2.png">   
-         <img class="center fit-vanes" id="target" src="static/vanes3.png">     
+        <img class="center fit-vanes" id="target" src="static/vanes3.png">     
     </body>
 </html>
