@@ -25,36 +25,37 @@
                 
                 
                 // mobile touch screen:
-                // $("#vanes").on("touchstart", function(event){
-                //     var previousX = event.touches[0].clientX;
-                //     var previousY = event.touches[0].clientY;
-                //     $("#vanes").on("touchmove", function(){
-                //         let x = event.touches[0].clientX;
-                //         let y = event.touches[0].clientY;
-                //         let coords = "X coords: " + x + ", Y coords: " + y;
-                //         document.getElementById("devdatas").innerHTML = coords;
+                $("#vanes").on("touchstart", function(event){
+                    document.getElementById("devdatas").innerHTML = "YEEAAHH";
+                    // var previousX = event.touches[0].clientX;
+                    // var previousY = event.touches[0].clientY;
+                    // $("#vanes").on("touchmove", function(){
+                    //     let x = event.touches[0].clientX;
+                    //     let y = event.touches[0].clientY;
+                    //     let coords = "X coords: " + x + ", Y coords: " + y;
+                    //     document.getElementById("devdatas").innerHTML = coords;
                         
-                //         $(this).css("transform", "rotate("+degree+"deg)");
-                //         degree = degree+speed;
-                //     });
-                // });
-                
-                var previousX = 0;
-                var previousY = 0;
-                $("#vanes").on("touchmove", function(){
-                    let x = event.touches[0].clientX;
-                    let y = event.touches[0].clientY;
-                    let coords = "X coords: " + Math.round(x) + ", Y coords: " + Math.round(y) + ", prevX: " + Math.round(previousX) + ", prevY: " + Math.round(previousY);
-                    document.getElementById("devdatas").innerHTML = coords;
-                    $(this).css("transform", "rotate("+degree+"deg)");
-                    if ((previousX < x && previousY < y)||(previousX < x && previousY === y)) {
-                        degree = degree+speed;
-                    } else if ((previousX > x && previousY > y)||(previousX > x && previousY === y)) {
-                        degree = degree-speed;
-                    };
-                    previousX = x;
-                    previousY = y;
+                    //     $(this).css("transform", "rotate("+degree+"deg)");
+                    //     degree = degree+speed;
+                    // });
                 });
+                
+                // var previousX = 0;
+                // var previousY = 0;
+                // $("#vanes").on("touchmove", function(){
+                //     let x = event.touches[0].clientX;
+                //     let y = event.touches[0].clientY;
+                //     let coords = "X coords: " + Math.round(x) + ", Y coords: " + Math.round(y) + ", prevX: " + Math.round(previousX) + ", prevY: " + Math.round(previousY);
+                //     document.getElementById("devdatas").innerHTML = coords;
+                //     $(this).css("transform", "rotate("+degree+"deg)");
+                //     if ((previousX < x && previousY < y)||(previousX < x && previousY === y)) {
+                //         degree = degree+speed;
+                //     } else if ((previousX > x && previousY > y)||(previousX > x && previousY === y)) {
+                //         degree = degree-speed;
+                //     };
+                //     previousX = x;
+                //     previousY = y;
+                // });
 
                 // PC mouse:
                 $("#vanes").on("mouseenter", function(event){
