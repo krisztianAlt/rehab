@@ -47,7 +47,7 @@ img {
 }  
 
 #devdatas {
-    position: relative;
+    position: absolute;
     z-index: 5;
 }
 
