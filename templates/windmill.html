@@ -44,7 +44,7 @@
                 $("#vanes").on("touchmove", function(){
                     let x = event.touches[0].clientX;
                     let y = event.touches[0].clientY;
-                    let coords = "X coords: " + x + ", Y coords: " + y + ", prevX: " + previousX + ", prevY: " + previousY;
+                    let coords = "X coords: " + Math.round(x) + ", Y coords: " + Math.round(y) + ", prevX: " + Math.round(previousX) + ", prevY: " + Math.round(previousY);
                     document.getElementById("devdatas").innerHTML = coords;
                     $(this).css("transform", "rotate("+degree+"deg)");
                     if ((previousX < x && previousY < y)||(previousX < x && previousY === y)) {
