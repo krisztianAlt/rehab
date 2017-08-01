@@ -3,11 +3,11 @@ $(document).ready(function(){
     var speed = 0.1;
     
     // use with mouse:
-    // $(document).on('mousemove', '#target', function(){
-    //     console.log('Vanes clicked');
-    //     $(this).css("transform", "rotate("+degree+"deg)");
-    //     degree = degree+speed;
-    // });
+    $(document).on('mousemove', '#target', function(){
+        console.log('Vanes clicked');
+        $(this).css("transform", "rotate("+degree+"deg)");
+        degree = degree+speed;
+    });
 
     // use with touchscreen:
     $(document).on('swiperight', '#target', function(){
