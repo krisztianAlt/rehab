@@ -3,14 +3,14 @@ $(document).ready(function(){
     var speed = 0.1;
     
     // use with mouse:
-    $(document).on('mousemove', '#target', function(){
+    $(document).on('mousemove', '#vanes', function(){
         console.log('Vanes clicked');
         $(this).css("transform", "rotate("+degree+"deg)");
         degree = degree+speed;
     });
 
     // use with touchscreen:
-    $(document).on('swiperight', '#target', function(){
+    $(document).on('swiperight', '#vanes', function(){
         alert('Vanes touched!');
         $(this).css("transform", "rotate("+degree+"deg)");
         degree = degree+speed;
