@@ -26,6 +26,7 @@
                 
                 // mobile touch screen:
                 $("#vanes").on("touchstart", function(event){
+                    document.getElementById("devdatas").innerHTML = 'YEAH';
                     var previousX = event.touches[0].clientX;
                     var previousY = event.touches[0].clientY;
                     document.getElementById("devdatas").innerHTML = previousX+', '+previousY;
