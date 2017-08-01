@@ -48,16 +48,13 @@ img {
 
 #devdatas {
     position: relative;
+    z-index: 5;
 }
 
-/* #mill {
+ #mill {
     z-index: 1;
 }
 
 #vanes {
     z-index: 3;
 }
-
-#target {
-    z-index: 5;
-} */
