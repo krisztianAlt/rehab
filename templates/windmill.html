@@ -25,15 +25,29 @@
                 
                 
                 // mobile touch screen:
-                $("#vanes").on("touchmove", function(){
-                    let x = event.touches[0].clientX;
-                    let y = event.touches[0].clientY;
-                    let coords = "X coords: " + x + ", Y coords: " + y;
-                    document.getElementById("devdatas").innerHTML = coords;
-                    
-                    $(this).css("transform", "rotate("+degree+"deg)");
-                    degree = degree+speed;
+                $("#vanes").on("touchenter", function(event){
+                    var previousX = event.touches[0].clientX;
+                    var previousY = event.touches[0].clientY;
+                    $("#vanes").on("touchmove", function(){
+                        let x = event.touches[0].clientX;
+                        let y = event.touches[0].clientY;
+                        let coords = "X coords: " + x + ", Y coords: " + y;
+                        document.getElementById("devdatas").innerHTML = coords;
+                        
+                        $(this).css("transform", "rotate("+degree+"deg)");
+                        degree = degree+speed;
+                    });
                 });
+
+                // $("#vanes").on("touchmove", function(){
+                //     let x = event.touches[0].clientX;
+                //     let y = event.touches[0].clientY;
+                //     let coords = "X coords: " + x + ", Y coords: " + y;
+                //     document.getElementById("devdatas").innerHTML = coords;
+                    
+                //     $(this).css("transform", "rotate("+degree+"deg)");
+                //     degree = degree+speed;
+                // });
 
                 // PC mouse:
                 $("#vanes").on("mouseenter", function(event){
