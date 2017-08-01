@@ -2,9 +2,9 @@ $(document).on("pagecreate",  function(){
     var degree = 0.3;
     var speed = 0.3;
     $("p").on("tap",function(){
-        // $(this).hide();
-        $(this).css("transform", "rotate("+degree+"deg)");
-        degree = degree+speed;
+        $(this).hide();
+        // $(this).css("transform", "rotate("+degree+"deg)");
+        // degree = degree+speed;
     });                       
 });
         
