@@ -10,8 +10,8 @@ $(document).ready(function(){
     });
 
     // use with touchscreen:
-    $(document).on('touchmove', '#target', function(){
-        console.log('Vanes clicked');
+    $(document).on('swiperight', '#target', function(){
+        alert('Vanes touched!');
         $(this).css("transform", "rotate("+degree+"deg)");
         degree = degree+speed;
     })
