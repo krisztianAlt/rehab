@@ -46,6 +46,9 @@ img {
     position: absolute;
 }  
 
+#devdatas {
+    position: relative;
+}
 
 /* #mill {
     z-index: 1;
