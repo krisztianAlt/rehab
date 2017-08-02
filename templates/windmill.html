@@ -66,8 +66,8 @@
 
 
                 $("#vanes").on("mouseenter", function(event){
-                var degree = 0.8;
-                var speed = 0.8;
+                    var degree = 0.8;
+                    var speed = 0.8;
                     let vanesImage = document.getElementById('vanes'); 
                     let widthOfVanes = vanesImage.clientWidth;
                     let heightOfVanes = vanesImage.clientHeight;
@@ -75,7 +75,7 @@
 
                     var previousX = event.clientX;
                     var previousY = event.clientY;
-                    $("#vanes").on("mousemove", function(event){
+                    $("#vanes").on("mousemove", "touchmove", function(event){
                         let x = event.clientX;
                         let y = event.clientY;
                         let coords = "X coords: " + x + ", Y coords: " + y + ", prevX: " + previousX + ", prevY: " + previousY;
@@ -132,9 +132,7 @@
                     });                 
                 });
                 $("#vanes").on("mouseleave", function(event){
-                    console.log('I am in leave section');
-                    var degree = 0.8;
-                    var speed = 0.8;
+                    console.log('I am in mouse leave section');
                 });
             });
         </script>
