@@ -9,7 +9,7 @@
         <!-- <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>  -->
         <!-- <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
         
-        <script src="{{url_for('static', filename='responsive_images.js')}}" defer></script>
+        <!-- <script src="{{url_for('static', filename='responsive_images.js')}}" defer></script> -->
         <script src="{{url_for('static', filename='rotate.js')}}" defer></script>
 
 
@@ -17,7 +17,20 @@
          <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
         <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-        <link rel="stylesheet" href="{{url_for('static', filename='windmill_style.css')}}">  
+        <link rel="stylesheet" href="{{url_for('static', filename='windmill_style.css')}}">
+        
+        <script type="text/javascript" language="JavaScript">
+            function set_body_height()
+            {
+                var wh = $(window).height();
+                $('body').attr('style', 'height:' + wh + 'px;');
+            }
+            $(document).ready(function() {
+                set_body_height();
+                $(window).bind('resize', function() { set_body_height(); });
+            });
+        </script>
+
         <script>
             $(document).on("pagecreate", function(){
                 var degree = 5;
