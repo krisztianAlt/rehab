@@ -10,7 +10,7 @@
         <!-- <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
         
         <!-- <script src="{{url_for('static', filename='responsive_images.js')}}" defer></script>  -->
-        <script src="{{url_for('static', filename='rotate.js')}}" defer></script>
+        <!-- <script src="{{url_for('static', filename='rotate.js')}}" defer></script> -->
 
 
         <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
@@ -18,8 +18,17 @@
         <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-         <link rel="stylesheet" href="{{url_for('static', filename='windmill_style.css')}}"> 
+        <link rel="stylesheet" href="{{url_for('static', filename='windmill_style.css')}}"> 
+        <script>
+            function set_body_height() { // set body height = window height
+                $('body').height($(window).height());
+            }
 
+            $(document).ready(function() {
+                $(window).bind('resize', set_body_height);
+                set_body_height();
+            })
+        </script>
         <script>
             $(document).on("pagecreate", function(){
                 
@@ -187,7 +196,7 @@
     <body>
         <p>DEVELOPMENT DATAS:</p>
         <p id="devdatas">jaja</p>
-        <img class="center fit col-2 col-sm-4" style="position: absolute" id="mill" src="static/mill3.png">    
-        <img class="center fit-vanes col-2 col-sm-4" style="position: absolute" id="vanes" src="static/vanes3.png">
+        <img class="center col-2 col-sm-4 col-md-6 col-lg-8 col-xl-10" style="position: absolute" id="mill" src="static/mill3.png">    
+        <img class="center col-2 col-sm-4 col-md-6 col-lg-8 col-xl-10" style="position: absolute" id="vanes" src="static/vanes3.png">
     </body>
 </html>
