@@ -54,14 +54,62 @@
                     let y = event.touches[0].clientY;
                     let coords = "X coords: " + Math.round(x) + ", Y coords: " + Math.round(y) + ", prevX: " + Math.round(previousX) + ", prevY: " + Math.round(previousY);
                     document.getElementById("devdatas").innerHTML = coords;
-                    $(this).css("transform", "rotate("+degree+"deg)");
-                    if ((previousX < x && previousY < y)||(previousX < x && previousY === y)) {
-                        degree = degree+speed;
-                    } else if ((previousX > x && previousY > y)||(previousX > x && previousY === y)) {
-                        degree = degree-speed;
-                    };
+                    // $(this).css("transform", "rotate("+degree+"deg)");
+                    // if ((previousX < x && previousY < y)||(previousX < x && previousY === y)) {
+                    //     degree = degree+speed;
+                    // } else if ((previousX > x && previousY > y)||(previousX > x && previousY === y)) {
+                    //     degree = degree-speed;
+                    // };
+                    // previousX = x;
+                    // previousY = y;
+                    if (x < widthOfVanes/2 && y < heightOfVanes/2) {
+                        if ((previousX < x && previousY < y) || (previousX < x && previousY === y)) {
+                            degree = degree+speed;
+                        } else if (previousX > x && previousY < y) {
+                            degree = degree-speed;
+                        } else if (previousX < x && previousY > y) {
+                            degree = degree+speed;
+                        } else if (previousX > x && previousY > y) {
+                            degree = degree-speed;
+                        };
+                    } else if (x > widthOfVanes/2 && y < heightOfVanes/2) {
+                        if (previousX < x && previousY < y) {
+                            degree = degree+speed;
+                        } else if (previousX > x && previousY < y) {
+                            degree = degree-speed;
+                        } else if (previousX < x && previousY > y) {
+                            degree = degree+speed;
+                        } else if (previousX > x && previousY > y) {
+                            degree = degree-speed;
+                        };
+                    } else if (x < widthOfVanes/2 && y > heightOfVanes/2) {
+                        if (previousX < x && previousY < y) {
+                            degree = degree-speed;
+                        } else if (previousX > x && previousY < y) {
+                            degree = degree+speed;
+                        } else if (previousX < x && previousY > y) {
+                            degree = degree-speed;
+                        } else if (previousX > x && previousY > y) {
+                            degree = degree+speed;
+                        };
+                    } else if (x > widthOfVanes/2 && y > heightOfVanes/2) {
+                        if (previousX < x && previousY < y) {
+                            degree = degree+speed;
+                        } else if (previousX > x && previousY < y) {
+                            degree = degree+speed;
+                        } else if (previousX < x && previousY > y) {
+                            degree = degree-speed;
+                        } else if (previousX > x && previousY > y) {
+                            degree = degree-speed;
+                        };
+                    } 
+                    console.log('Degree: ' + degree + ', speed: ' + speed);
                     previousX = x;
                     previousY = y;
+
+                    if (degree>360 || degree<-360) {
+                        degree = 0.8;
+                    }
                 });
 
                 
