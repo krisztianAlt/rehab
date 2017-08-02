@@ -61,25 +61,25 @@
                 });
 
                 // PC mouse:
-                // $("#vanes").on("mouseenter", function(event){
-                //     var previousX = event.clientX;
-                //     var previousY = event.clientY;
-                //     $("#vanes").on("mousemove", function(event){
-                //         let x = event.clientX;
-                //         let y = event.clientY;
-                //         let coords = "X coords: " + x + ", Y coords: " + y + ", prevX: " + previousX + ", prevY: " + previousY;
-                //         document.getElementById("devdatas").innerHTML = coords;
-                //         $(this).css("transform", "rotate("+degree+"deg)");
-                //         if ((previousX < x && previousY < y)||(previousX < x && previousY === y)) {
-                //             degree = degree+speed;
-                //         } else if ((previousX > x && previousY > y)||(previousX > x && previousY === y)) {
-                //             degree = degree-speed;
-                //         };
+                $("#vanes").on("mouseenter", function(event){
+                    var previousX = event.clientX;
+                    var previousY = event.clientY;
+                    $("#vanes").on("mousemove", function(event){
+                        let x = event.clientX;
+                        let y = event.clientY;
+                        let coords = "X coords: " + x + ", Y coords: " + y + ", prevX: " + previousX + ", prevY: " + previousY;
+                        document.getElementById("devdatas").innerHTML = coords;
+                        $(this).css("transform", "rotate("+degree+"deg)");
+                        if ((previousX < x && previousY < y)||(previousX < x && previousY === y)) {
+                            degree = degree+speed;
+                        } else if ((previousX > x && previousY > y)||(previousX > x && previousY === y)) {
+                            degree = degree-speed;
+                        };
 
-                //         previousX = x;
-                //         previousY = y;
-                //     });                       
-                // });
+                        previousX = x;
+                        previousY = y;
+                    });                       
+                });
             });
         </script>
     </head>
@@ -102,7 +102,7 @@
 
         <p>DEVELOPMENT DATAS:</p>
         <p id="devdatas">jaja</p>
-        <img class="center fit" id="mill" src="static/mill3.png">    
+        <img class="center fit" id="mill" src="static/mill4.png">    
         <img class="center fit-vanes" id="vanes" src="static/vanes3.png">
     </body>
 </html>
