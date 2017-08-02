@@ -27,9 +27,10 @@
                 // https://stackoverflow.com/questions/4992355/how-to-get-position-coordinates-of-a-tap-event-with-jquery-mobile
 
                 // mobile touch screen:
-                // var degree = 5;
-                // var speed = 5;
+                
                 // $("#vanes").on("touchstart", function(event){
+                    // var degree = 5;
+                    // var speed = 5;
                 //     document.getElementById("devdatas").innerHTML = 'YEAH';
                 //     var previousX = event.changedTouches[0].clientX;
                 //     var previousY = event.changedTouches[0].clientY;
@@ -58,13 +59,6 @@
                     let coords = "X coords: " + Math.round(x) + ", Y coords: " + Math.round(y) + ", prevX: " + Math.round(previousX) + ", prevY: " + Math.round(previousY);
                     document.getElementById("devdatas").innerHTML = coords;
                     $(this).css("transform", "rotate("+degree+"deg)");
-                    // if ((previousX < x && previousY < y)||(previousX < x && previousY === y)) {
-                    //     degree = degree+speed;
-                    // } else if ((previousX > x && previousY > y)||(previousX > x && previousY === y)) {
-                    //     degree = degree-speed;
-                    // };
-                    // previousX = x;
-                    // previousY = y;
                     if (x < widthOfVanes/2 && y < heightOfVanes/2) {
                         if ((previousX < x && previousY < y) || (previousX < x && previousY === y)) {
                             degree = degree+speed;
@@ -117,75 +111,75 @@
 
                 
                 // PC mouse:
-                // $("#vanes").on("mouseenter", function(event){
-                //     var degree = 0.8;
-                //     var speed = 0.8;
-                //     let vanesImage = document.getElementById('vanes'); 
-                //     let widthOfVanes = vanesImage.clientWidth;
-                //     let heightOfVanes = vanesImage.clientHeight;
-                //     console.log('Image datas: ' + widthOfVanes + ', ' + heightOfVanes);
+                $("#vanes").on("mouseenter", function(event){
+                    var degree = 0.8;
+                    var speed = 0.8;
+                    let vanesImage = document.getElementById('vanes'); 
+                    let widthOfVanes = vanesImage.clientWidth;
+                    let heightOfVanes = vanesImage.clientHeight;
+                    console.log('Image datas: ' + widthOfVanes + ', ' + heightOfVanes);
 
-                //     var previousX = event.clientX;
-                //     var previousY = event.clientY;
-                //     $("#vanes").on("mousemove", function(event){
-                //         let x = event.clientX;
-                //         let y = event.clientY;
-                //         let coords = "X coords: " + x + ", Y coords: " + y + ", prevX: " + previousX + ", prevY: " + previousY;
-                //         document.getElementById("devdatas").innerHTML = coords;
-                //         $(this).css("transform", "rotate("+degree+"deg)");
-                //         if (x < widthOfVanes/2 && y < heightOfVanes/2) {
-                //             if ((previousX < x && previousY < y) || (previousX < x && previousY === y)) {
-                //                 degree = degree+speed;
-                //             } else if (previousX > x && previousY < y) {
-                //                 degree = degree-speed;
-                //             } else if (previousX < x && previousY > y) {
-                //                 degree = degree+speed;
-                //             } else if (previousX > x && previousY > y) {
-                //                 degree = degree-speed;
-                //             };
-                //         } else if (x > widthOfVanes/2 && y < heightOfVanes/2) {
-                //             if (previousX < x && previousY < y) {
-                //                 degree = degree+speed;
-                //             } else if (previousX > x && previousY < y) {
-                //                 degree = degree-speed;
-                //             } else if (previousX < x && previousY > y) {
-                //                 degree = degree+speed;
-                //             } else if (previousX > x && previousY > y) {
-                //                 degree = degree-speed;
-                //             };
-                //         } else if (x < widthOfVanes/2 && y > heightOfVanes/2) {
-                //             if (previousX < x && previousY < y) {
-                //                 degree = degree-speed;
-                //             } else if (previousX > x && previousY < y) {
-                //                 degree = degree+speed;
-                //             } else if (previousX < x && previousY > y) {
-                //                 degree = degree-speed;
-                //             } else if (previousX > x && previousY > y) {
-                //                 degree = degree+speed;
-                //             };
-                //         } else if (x > widthOfVanes/2 && y > heightOfVanes/2) {
-                //             if (previousX < x && previousY < y) {
-                //                 degree = degree+speed;
-                //             } else if (previousX > x && previousY < y) {
-                //                 degree = degree+speed;
-                //             } else if (previousX < x && previousY > y) {
-                //                 degree = degree-speed;
-                //             } else if (previousX > x && previousY > y) {
-                //                 degree = degree-speed;
-                //             };
-                //         } 
-                //         console.log('Degree: ' + degree + ', speed: ' + speed);
-                //         previousX = x;
-                //         previousY = y;
+                    var previousX = event.clientX;
+                    var previousY = event.clientY;
+                    $("#vanes").on("mousemove", function(event){
+                        let x = event.clientX;
+                        let y = event.clientY;
+                        let coords = "X coords: " + x + ", Y coords: " + y + ", prevX: " + previousX + ", prevY: " + previousY;
+                        document.getElementById("devdatas").innerHTML = coords;
+                        $(this).css("transform", "rotate("+degree+"deg)");
+                        if (x < widthOfVanes/2 && y < heightOfVanes/2) {
+                            if ((previousX < x && previousY < y) || (previousX < x && previousY === y)) {
+                                degree = degree+speed;
+                            } else if (previousX > x && previousY < y) {
+                                degree = degree-speed;
+                            } else if (previousX < x && previousY > y) {
+                                degree = degree+speed;
+                            } else if (previousX > x && previousY > y) {
+                                degree = degree-speed;
+                            };
+                        } else if (x > widthOfVanes/2 && y < heightOfVanes/2) {
+                            if (previousX < x && previousY < y) {
+                                degree = degree+speed;
+                            } else if (previousX > x && previousY < y) {
+                                degree = degree-speed;
+                            } else if (previousX < x && previousY > y) {
+                                degree = degree+speed;
+                            } else if (previousX > x && previousY > y) {
+                                degree = degree-speed;
+                            };
+                        } else if (x < widthOfVanes/2 && y > heightOfVanes/2) {
+                            if (previousX < x && previousY < y) {
+                                degree = degree-speed;
+                            } else if (previousX > x && previousY < y) {
+                                degree = degree+speed;
+                            } else if (previousX < x && previousY > y) {
+                                degree = degree-speed;
+                            } else if (previousX > x && previousY > y) {
+                                degree = degree+speed;
+                            };
+                        } else if (x > widthOfVanes/2 && y > heightOfVanes/2) {
+                            if (previousX < x && previousY < y) {
+                                degree = degree+speed;
+                            } else if (previousX > x && previousY < y) {
+                                degree = degree+speed;
+                            } else if (previousX < x && previousY > y) {
+                                degree = degree-speed;
+                            } else if (previousX > x && previousY > y) {
+                                degree = degree-speed;
+                            };
+                        } 
+                        console.log('Degree: ' + degree + ', speed: ' + speed);
+                        previousX = x;
+                        previousY = y;
 
-                //         if (degree>360 || degree<-360) {
-                //             degree = 0.8;
-                //         }
-                //     });                 
-                // });
-                // $("#vanes").on("mouseleave", function(event){
-                //     console.log('I am in mouse leave section');
-                // });
+                        if (degree>360 || degree<-360) {
+                            degree = 0.8;
+                        }
+                    });                 
+                });
+                $("#vanes").on("mouseleave", function(event){
+                    console.log('I am in mouse leave section');
+                });
             });
         </script>
     </head>
