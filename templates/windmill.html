@@ -23,40 +23,42 @@
                 var degree = 5;
                 var speed = 5;
                 
-                
+                // KIPRÓBÁLNI:
+                // https://stackoverflow.com/questions/4992355/how-to-get-position-coordinates-of-a-tap-event-with-jquery-mobile
+
                 // mobile touch screen:
-                $("#vanes").on("touchstart", function(event){
-                    document.getElementById("devdatas").innerHTML = 'YEAH';
-                    var previousX = event.changedTouches[0].clientX;
-                    var previousY = event.changedTouches[0].clientY;
-                    document.getElementById("devdatas").innerHTML = previousX+', '+previousY;
-                    // $("#vanes").on("touchmove", function(){
-                    //     let x = event.touches[0].clientX;
-                    //     let y = event.touches[0].clientY;
-                    //     let coords = "X coords: " + x + ", Y coords: " + y;
-                    //     document.getElementById("devdatas").innerHTML = coords;
+                // $("#vanes").on("touchstart", function(event){
+                //     document.getElementById("devdatas").innerHTML = 'YEAH';
+                //     var previousX = event.changedTouches[0].clientX;
+                //     var previousY = event.changedTouches[0].clientY;
+                //     document.getElementById("devdatas").innerHTML = previousX+', '+previousY;
+                //     // $("#vanes").on("touchmove", function(){
+                //     //     let x = event.touches[0].clientX;
+                //     //     let y = event.touches[0].clientY;
+                //     //     let coords = "X coords: " + x + ", Y coords: " + y;
+                //     //     document.getElementById("devdatas").innerHTML = coords;
                         
-                    //     $(this).css("transform", "rotate("+degree+"deg)");
-                    //     degree = degree+speed;
-                    // });
-                });
-                
-                // var previousX = 0;
-                // var previousY = 0;
-                // $("#vanes").on("touchmove", function(){
-                //     let x = event.touches[0].clientX;
-                //     let y = event.touches[0].clientY;
-                //     let coords = "X coords: " + Math.round(x) + ", Y coords: " + Math.round(y) + ", prevX: " + Math.round(previousX) + ", prevY: " + Math.round(previousY);
-                //     document.getElementById("devdatas").innerHTML = coords;
-                //     $(this).css("transform", "rotate("+degree+"deg)");
-                //     if ((previousX < x && previousY < y)||(previousX < x && previousY === y)) {
-                //         degree = degree+speed;
-                //     } else if ((previousX > x && previousY > y)||(previousX > x && previousY === y)) {
-                //         degree = degree-speed;
-                //     };
-                //     previousX = x;
-                //     previousY = y;
+                //     //     $(this).css("transform", "rotate("+degree+"deg)");
+                //     //     degree = degree+speed;
+                //     // });
                 // });
+                
+                var previousX = 0;
+                var previousY = 0;
+                $("#vanes").on("touchmove", function(){
+                    let x = event.touches[0].clientX;
+                    let y = event.touches[0].clientY;
+                    let coords = "X coords: " + Math.round(x) + ", Y coords: " + Math.round(y) + ", prevX: " + Math.round(previousX) + ", prevY: " + Math.round(previousY);
+                    document.getElementById("devdatas").innerHTML = coords;
+                    $(this).css("transform", "rotate("+degree+"deg)");
+                    if ((previousX < x && previousY < y)||(previousX < x && previousY === y)) {
+                        degree = degree+speed;
+                    } else if ((previousX > x && previousY > y)||(previousX > x && previousY === y)) {
+                        degree = degree-speed;
+                    };
+                    previousX = x;
+                    previousY = y;
+                });
 
                 // PC mouse:
                 // $("#vanes").on("mouseenter", function(event){
