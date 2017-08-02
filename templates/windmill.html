@@ -50,6 +50,9 @@
                 var degree = 5;
                 var speed = 5;
                 $("#vanes").on("touchmove", function(){
+                    let vanesImage = document.getElementById('vanes'); 
+                    let widthOfVanes = vanesImage.clientWidth;
+                    let heightOfVanes = vanesImage.clientHeight;
                     let x = event.touches[0].clientX;
                     let y = event.touches[0].clientY;
                     let coords = "X coords: " + Math.round(x) + ", Y coords: " + Math.round(y) + ", prevX: " + Math.round(previousX) + ", prevY: " + Math.round(previousY);
@@ -103,7 +106,7 @@
                             degree = degree-speed;
                         };
                     } 
-                    console.log('Degree: ' + degree + ', speed: ' + speed);
+    
                     previousX = x;
                     previousY = y;
 
