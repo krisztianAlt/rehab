@@ -22,6 +22,8 @@
         <script>
             function set_body_height() { // set body height = window height
                 $('body').height($(window).height());
+                $('body').width($(window).width());
+                console.log($('body').height(), $('body').width())
 
                 let millImage = document.getElementById('mill'); 
                 let widthOfMill = millImage.clientWidth;
@@ -33,7 +35,7 @@
                 let heightOfVanes = vanesImage.clientHeight;
                 console.log('Width of vanes: '+widthOfVanes +', height of vanes: '+heightOfVanes);
 
-                let vanesTopProperty = (heightOfMill-heightOfVanes)/2;
+                let vanesTopProperty = (heightOfMill-heightOfVanes);
                 console.log('Vanes top: '+vanesTopProperty);
                 $('#vanes').css("top", vanesTopProperty);
 
@@ -44,8 +46,8 @@
             }
 
             $(document).ready(function() {
-                $(window).bind('resize', set_body_height);
                 set_body_height();
+                $(window).bind('resize', set_body_height);
             })
         </script>
         <script>
