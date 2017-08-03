@@ -33,6 +33,10 @@
                 let heightOfVanes = vanesImage.clientHeight;
                 console.log('Width of vanes: '+widthOfVanes +', height of vanes: '+heightOfVanes);
 
+                let vanesTopProperty = (heightOfMill-heightOfVanes)/2;
+                console.log('Vanes top: '+vanesTopProperty);
+                $('#vanes').css("top", vanesTopProperty);
+                
                 let vanesLeftProperty = (widthOfMill-widthOfVanes)/2;
                 console.log('Vanes left: '+vanesLeftProperty);
                 $('#vanes').css("left", vanesLeftProperty);
