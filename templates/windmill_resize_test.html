@@ -14,7 +14,7 @@
 
 
         <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
         <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -33,9 +33,9 @@
                 let heightOfVanes = vanesImage.clientHeight;
                 console.log('Width of vanes: '+widthOfVanes +', height of vanes: '+heightOfVanes);
 
-                // let vanesTopProperty = (heightOfMill-heightOfVanes)/2;
-                // console.log('Vanes top: '+vanesTopProperty);
-                // $('#vanes').css("top", vanesTopProperty);
+                let vanesTopProperty = (heightOfMill-heightOfVanes)/2;
+                console.log('Vanes top: '+vanesTopProperty);
+                $('#vanes').css("top", vanesTopProperty);
 
                 let vanesLeftProperty = (widthOfMill-widthOfVanes)/2;
                 console.log('Vanes left: '+vanesLeftProperty);
@@ -50,6 +50,7 @@
         </script>
         <script>
             $(document).on("pagecreate", function(){
+                
                 
                 // TRY IT:
                 // https://stackoverflow.com/questions/4992355/how-to-get-position-coordinates-of-a-tap-event-with-jquery-mobile

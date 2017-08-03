@@ -33,8 +33,8 @@ body {
 }
 
 .fit-vanes { /* set relative picture size */
-    max-width: 50%; /* yesterday: 70% */
-    max-height: 50%; /* yesterday: 70% */
+    max-width: 30%; /* yesterday: 70% */
+    max-height: 30%; /* yesterday: 70% */
 }
 
 .center {
