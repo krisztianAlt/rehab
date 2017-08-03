@@ -28,14 +28,14 @@ body {
 
 
 .fit { /* set relative picture size */
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 95%; /* yesterday: 95% */
+    max-height: 85%; /* yesterday: 85% */
 }
 
 .fit-vanes { /* set relative picture size */
-    max-width: 100%;
-    max-height: 100%;
-    overflow: hidden;
+    max-width: 70%; /* yesterday: 70% */
+    max-height: 70%; /* yesterday: 70% */
+    left: 30px;
 }
 
 .center {

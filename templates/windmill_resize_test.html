@@ -32,6 +32,11 @@
                 let widthOfVanes = vanesImage.clientWidth;
                 let heightOfVanes = vanesImage.clientHeight;
                 console.log('Width of vanes: '+widthOfVanes +', height of vanes: '+heightOfVanes);
+
+                let vanesLeftProperty = (widthOfMill-widthOfVanes)/2;
+                console.log('Vanes left: '+vanesLeftProperty);
+                $('#vanes').css("left", vanesLeftProperty);
+
             }
 
             $(document).ready(function() {
@@ -204,7 +209,6 @@
         </script>
     </head>
     <body>
-        <p>DEVELOPMENT DATAS:</p>
         <p>DEVELOPMENT DATAS:</p>
         <p id="devdatas">waiting for move...</p>
         <img class="center fit" style="position: absolute" id="mill" src="static/mill3.png">    
