@@ -28,13 +28,13 @@ body {
 
 
 .fit { /* set relative picture size */
-    max-width: 95%;
-    max-height: 85%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .fit-vanes { /* set relative picture size */
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 100%;
+    max-height: 100%;
     overflow: hidden;
 }
 
